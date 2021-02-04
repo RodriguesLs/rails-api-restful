@@ -10,7 +10,7 @@ services:
       - "3001:3001"
     environment:
       DATABASE_URL: postgres://postgres:postgres@db:5432/rails-api-restful
-    command: "rails s -b 0.0.0.0 -p 3001"
+    command: bash -c "bundle && rails s -b 0.0.0.0 -p 3001"
     depends_on:
       - db
   
